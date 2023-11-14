@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>Recipes</h1>
+    <p>{{ welcome_text }}</p>
+    
+    {% if recipes %}
+        <ul>
+            {% for recipe in recipes %}
+                <li>
+                    {{ recipe.title }} - {{ recipe.ingred }} - {{ recipe.quantity }} - {{ recipe.mesure }} - {{ recipe.description }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recipes available.</p>
+    {% endif %}
+    
+</body>
+</html>
